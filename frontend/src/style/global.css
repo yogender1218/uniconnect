@@ -1,0 +1,35 @@
+:root {
+  --bg-color: #f7f7f7;
+  --text-color: #000000;
+  --blur-bgcolor: rgba(255, 255, 255, 0.014);
+  --formborder-color:rgb(49, 50, 51);
+  --border-color:rgb(212, 211, 211);
+  --box-shadow: rgba(210, 210, 211, 0.2) 0px 8px 24px;
+  --nav-hovcolor:rgba(52, 52, 54, 0.418);
+  --htext-color: #b3b2b28e;
+  --ftext-color: #3f3f41;
+  --fcontent-color:rgb(15, 15, 15);
+  --form-input-background: #f7f7f7;
+  --form-input-box-shadow:inset 5px 5px 10px rgba(231, 231, 231, 0.411), inset -5px -5px 12px rgba(255, 255, 255, 0.575);
+}
+
+[data-theme="dark"] {
+  --bg-color: #000005;
+  --text-color: #ffffff;
+  --blur-bgcolor: rgba(18, 18, 18, 0.26);
+  --formborder-color:rgb(24, 23, 23);
+  --border-color:rgb(75, 75, 75);
+  --box-shadow: rgba(29, 29, 29, 0.205) 0px 8px 24px;
+  --nav-hovcolor:rgba(50, 50, 51, 0.404);
+  --htext-color: #302e2ecc;
+  --ftext-color: #867f7f;
+  --fcontent-color:rgb(223, 221, 221);
+  --form-input-background: #010b1638;
+  --form-input-box-shadow:inset 5px 5px 10px rgba(12, 12, 12, 0.884), inset -5px -5px 5px 12px rgba(24, 24, 24, 0.021);
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
