@@ -36,13 +36,38 @@ import { Link } from "react-router-dom";
 import { StyledGetStarted } from './StylesGetStarted';
 
 const mockdata = [
-  { icon: IconCode, title: 'Real-Time Price Updates', description: 'Catch the heartbeat of the market as it flows live' },
-  { icon: IconCoin, title: 'Historical Data Visualization', description: 'Revisit the stories of the past through interactive charts and graphs' },
-  { icon: IconBook, title: 'Automated Trading Bot', description: 'Set your rules and algorithms, and watch smart trades unfold' },
-  { icon: IconFingerprint, title: 'AR/VR Visualization', description: 'Immerse yourself in 3D market realities—where data meets art' },
-  { icon: IconChartPie3, title: 'Price Prediction', description: 'Machine learning marvels forecasting your next crypto wave' },
-  { icon: IconNotification, title: 'Notifications', description: 'Set notifications for price alerts, market trends, and more' },
+  { 
+    icon: IconBook, 
+    title: 'Real-Time Class Updates', 
+    description: 'Stay updated with live class schedules, announcements, and events' 
+  },
+  { 
+    icon: IconChartPie3, 
+    title: 'Progress Tracking', 
+    description: 'Monitor academic progress and skill development with detailed reports' 
+  },
+  { 
+    icon: IconCode, 
+    title: 'Personalized Learning Paths', 
+    description: 'Choose tailored learning journeys based on your goals and interests' 
+  },
+  { 
+    icon: IconFingerprint, 
+    title: 'Interactive Virtual Campus', 
+    description: 'Experience campus life and networking in immersive AR/VR environments' 
+  },
+  { 
+    icon: IconCoin, 
+    title: 'Mentorship Programs', 
+    description: 'Connect with experienced mentors for guidance and career advice' 
+  },
+  { 
+    icon: IconNotification, 
+    title: 'Smart Notifications', 
+    description: 'Get notified about deadlines, workshops, seminars, and new opportunities' 
+  },
 ];
+
 
 
 export function HeaderMegaMenu() {
@@ -82,9 +107,9 @@ export function HeaderMegaMenu() {
         <Group h="100%" w="100%"  justify="space-between" >
           {/* Left Section - Logo & Brand Name */}
           <Group align="center" gap="xs"  style={{paddingLeft:'3.1vw'}} >
-          <Link to="/"> <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} /></Link>
+          <Link to="/"> <img src="/UniConnect/UniConnectt.png" alt="Logo" className={classes.logo} /></Link>
            <Link to="/">
-           <Text fw={500}>TradeSense</Text>
+           <Text fw={500}>UniConnect</Text>
            </Link>
           </Group>
 
@@ -118,7 +143,7 @@ export function HeaderMegaMenu() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>Market Trends</a>
+            <a href="#" className={classes.link}>Workflow</a>
             <a href="#" className={classes.link}>Community</a>
             <Link to="/support" className={classes.link}>Support</Link>
           </Group>
@@ -126,7 +151,7 @@ export function HeaderMegaMenu() {
           {/* Right Section - Auth Buttons & Theme Toggle */}
           <Group visibleFrom="sm" gap="sm">
           <Link to="/login"><Button variant="default"><ConfettiSideCannons></ConfettiSideCannons></Button></Link>
-          <Link to="/login"> <Button><StyledRegister></StyledRegister></Button></Link>
+          <Link to="/sinup"> <Button><StyledRegister></StyledRegister></Button></Link>
             <button className={classes.themeToggle} onClick={toggleTheme}>
               {theme === "light" ? <IconMoon size={22} /> : <IconSun size={22} />}
             </button>

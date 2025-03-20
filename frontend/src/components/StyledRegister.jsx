@@ -2,9 +2,11 @@
 
 import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
+
 export function StyledRegister() {
+
   const handleClick = () => {
-    const end = Date.now() + 3 * 1000; // 3 seconds
+    const end = Date.now() + 3 * 1000;
     const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 
     const frame = () => {
@@ -34,8 +36,14 @@ export function StyledRegister() {
   };
 
   return (
-    <div className="relative">
-      <Button type='submit' onClick={handleClick}>Sin up</Button>
+    <div>
+      {/* Button */}
+      <Button
+        onClick={handleClick}
+        type="submit"
+      >
+        Sign Up
+      </Button>
     </div>
   );
 }

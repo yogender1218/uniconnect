@@ -1,100 +1,92 @@
 import { Button, Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
 import classes from './FeaturesTitle.module.css';
 
-import { IconChartLine, IconHistory, IconWallet, IconRobot, IconUsers, IconCurrencyDollar, IconTrendingUp, IconUserPlus, IconCalculator, IconTrophy, IconBell, IconCube, IconLanguage, IconLock, IconDatabase, IconUser, IconSun, IconMessageCircle, IconGlobe } from '@tabler/icons-react';
+import { IconUsers, IconChartLine, IconBrain, IconHandGrab, IconUserPlus, IconTrendingUp, IconCertificate, IconShieldLock, IconBell, IconCube, IconCalculator, IconDatabase, IconGlobe, IconMessageCircle, IconHistory, IconTrophy, IconRocket } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
 import { StyledGetStarted } from './StylesGetStarted';
 
 const features = [
   {
+    icon: IconUsers,
+    title: 'Student-Mentor-Investor Network',
+    description: 'Connect seamlessly with industry mentors, potential investors, and fellow innovators to amplify your startup’s growth.',
+  },
+  {
     icon: IconChartLine,
-    title: 'Real-Time Price Updates',
-    description: 'Stay informed with live crypto prices fetched from reliable APIs, ensuring you never miss a market movement.',
+    title: 'Real-Time Startup Progress Tracker',
+    description: 'Monitor key metrics, funding milestones, and user growth live, ensuring you stay on top of every development.',
   },
   {
-    icon: IconHistory,
-    title: 'Historical Data Visualization',
-    description: 'Analyze market trends with interactive graphs and charts powered by Chart.js, offering insights into past performance.',
+    icon: IconBrain,
+    title: 'AI-Powered Startup Insights',
+    description: 'Leverage AI analytics to predict trends, optimize strategies, and gain a competitive edge in the entrepreneurial ecosystem.',
   },
   {
-    icon: IconWallet,
-    title: 'Portfolio Tracker',
-    description: 'Manage and monitor your crypto investments seamlessly, keeping track of your assets in one place.',
-  },
-  {
-    icon: IconRobot,
-    title: 'Automated Trading Bot',
-    description: 'Set predefined rules for automatic buying and selling, optimizing your trading strategy without manual intervention.',
-  },
-  {
-    icon: IconUsers,
-    title: 'Social Sentiment Analysis',
-    description: 'Leverage AI to analyze market sentiment from platforms like Twitter, Reddit, and news outlets, aiding in informed decision-making.',
-  },
-  {
-    icon: IconCurrencyDollar,
-    title: 'Price Prediction',
-    description: 'Utilize machine learning models to forecast future prices, enhancing your investment strategies.',
-  },
-  {
-    icon: IconUsers,
-    title: 'User-to-User Trading',
-    description: 'Engage in peer-to-peer trading with secure escrow services, ensuring safe and efficient transactions.',
-  },
-  {
-    icon: IconCalculator,
-    title: 'Crypto Mining Calculator',
-    description: 'Calculate mining profitability based on your hardware, assisting in evaluating investment viability.',
-  },
-  {
-    icon: IconBell,
-    title: 'Advanced Notifications',
-    description: 'Receive real-time alerts for price changes, trades, and news, keeping you ahead in the market.',
-  },
-  {
-    icon: IconCube,
-    title: 'AR/VR-Based Visualization',
-    description: 'Experience market trends in 3D, offering an immersive analytical experience.',
+    icon: IconHandGrab,
+    title: 'Investor Matchmaking',
+    description: 'Smart algorithm matches promising startups with relevant investors, simplifying the fundraising journey.',
   },
   {
     icon: IconUserPlus,
-    title: 'Custom Watchlist',
-    description: 'Add your favorite cryptocurrencies with personalized price alerts, staying updated on your interests.',
-  },
-  {
-    icon: IconLanguage,
-    title: 'Learning Section',
-    description: 'Access tutorials for beginners and certification options, enhancing your crypto knowledge.',
-  },
-  {
-    icon: IconLock,
-    title: 'Authentication & Security',
-    description: 'Implement 2FA for account security and data encryption for portfolio details, ensuring user safety.',
+    title: 'Talent Pool Integration',
+    description: 'Access a curated pool of skilled individuals ready to join your vision and scale up your venture.',
   },
   {
     icon: IconTrendingUp,
-    title: 'Market Overview',
-    description: 'Display top gainers, losers, and trending coins, providing a snapshot of the market landscape.',
+    title: 'Market Overview & Trends',
+    description: 'Stay informed about industry trends, competitor analysis, and emerging market shifts to fine-tune your strategies.',
   },
   {
-    icon: IconSun,
-    title: 'Dark/Light Theme Toggle',
-    description: 'Choose between user-friendly themes for better UI/UX, enhancing visual comfort.',
+    icon: IconCertificate,
+    title: 'Learning & Certification Hub',
+    description: 'Upskill with curated courses, workshops, and certifications designed specifically for startup founders and teams.',
   },
   {
-    icon: IconMessageCircle,
-    title: 'Integrated Chat Support',
-    description: 'Access AI-powered chatbot for user queries, providing instant assistance.',
+    icon: IconShieldLock,
+    title: 'Advanced Security & Compliance',
+    description: 'Ensure your startup’s data integrity with encryption protocols, regulatory compliance, and 2FA authentication.',
+  },
+  {
+    icon: IconBell,
+    title: 'Custom Alerts & Notifications',
+    description: 'Get real-time alerts on investor interest, funding updates, and important startup milestones.',
+  },
+  {
+    icon: IconCube,
+    title: 'AR/VR-Based Startup Demos',
+    description: 'Showcase immersive startup pitches and product demos in 3D, offering investors a next-level experience.',
+  },
+  {
+    icon: IconCalculator,
+    title: 'Startup Valuation Calculator',
+    description: 'Accurately evaluate your startup’s worth based on key financial and market factors.',
+  },
+  {
+    icon: IconDatabase,
+    title: 'Investor & Startup Database',
+    description: 'Access an extensive database of verified investors, startups, mentors, and accelerators all in one place.',
   },
   {
     icon: IconGlobe,
-    title: 'Global News Integration',
-    description: 'Stay informed with real-time crypto news feed integrated into the dashboard, keeping you updated on market developments.',
+    title: 'Global Startup News Integration',
+    description: 'Stay updated with real-time startup news, investment rounds, and entrepreneurial breakthroughs worldwide.',
+  },
+  {
+    icon: IconMessageCircle,
+    title: 'Integrated AI Chat Support',
+    description: 'Get instant guidance and answers to your startup queries through our AI-powered chatbot support.',
+  },
+  {
+    icon: IconHistory,
+    title: 'Funding History Visualization',
+    description: 'Analyze past funding rounds and investor participation through interactive charts and data visualizations.',
+  },
+  {
+    icon: IconTrophy,
+    title: 'Leaderboard & Recognition',
+    description: 'Highlight top-performing startups, most active mentors, and successful investments to inspire community excellence.',
   },
 ];
-
-
-
 
 export function FeaturesTitle() {
   const items = features.map(({ icon: Icon, title, description }) => (
@@ -103,7 +95,7 @@ export function FeaturesTitle() {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+        gradient={{ deg: 133, from: 'indigo', to: 'cyan' }}
       >
         <Icon size={26} stroke={1.5} />
       </ThemeIcon>
@@ -121,16 +113,16 @@ export function FeaturesTitle() {
       <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Title className={classes.title} order={2}>
-          A Fully-Featured Crypto Ecosystem Engineered for Modern Traders 🚀
+          The Ultimate Startup Ecosystem Engineered for Visionaries 🚀
           </Title>
           <Text c="dimmed">
-          Build smarter crypto strategies faster than ever – TradeSense integrates 50+ AI-powered tools, real-time data streams, and institutional-grade security to dominate volatile markets.
+          Transform ideas into impact—UniConnect offers AI-driven tools, real-time progress tracking, and a vibrant community of mentors, investors, and innovators to accelerate your journey.
           </Text>
 
          <Link to="/login">
          <Button
             variant="gradient"
-            gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+            gradient={{ deg: 133, from: 'indigo', to: 'cyan' }}
             size="lg"
             radius="md"
             mt="xl"

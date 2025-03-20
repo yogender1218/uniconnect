@@ -14,7 +14,7 @@ const data = [
     rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=10",
     message:
-      "Using cryptolovee has transformed my crypto journey – real-time updates and AI insights blend like a perfect symphony, capturing both tradition and futuristic flair.",
+      "The platform’s personalized mentorship and seamless networking tools have elevated my entrepreneurial journey beyond expectations.",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     rating: ratingStar[4],
     avatar: "https://i.pravatar.cc/100?img=20",
     message:
-      "The platform’s seamless interface and advanced functionalities make every market pulse feel like a timeless dance between history and innovation.",
+      "Pitching my startup idea and receiving real-time feedback from experienced mentors made the process smooth and insightful.",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const data = [
     rating: ratingStar[4],
     avatar: "https://i.pravatar.cc/100?img=30",
     message:
-      "From interactive charts to AR/VR visualizations, this platform paints the crypto market as a canvas of endless possibilities.",
+      "From idea validation to team collaboration, this platform is a complete ecosystem for young innovators.",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const data = [
     rating: ratingStar[3],
     avatar: "https://i.pravatar.cc/100?img=40",
     message:
-      "Navigating crypto trends has never been more poetic – every feature sings the ballad of innovation and legacy.",
+      "Being able to connect with industry professionals and get their advice has given me clarity on my career path.",
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const data = [
     rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=50",
     message:
-      "cryptolovee is a fusion of old-world wisdom and cutting-edge technology – truly a digital masterpiece.",
+      "The platform’s balance of learning resources, mentorship sessions, and community engagement is unmatched.",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const data = [
     rating: ratingStar[4],
     avatar: "https://i.pravatar.cc/100?img=60",
     message:
-      "The intuitive design and robust features elevate every trading moment into an art form.",
+      "I love how easily I could upload my pitch deck and gain visibility among potential investors.",
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const data = [
     rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=14",
     message:
-      "My crypto aspirations find a home on this platform – a perfect blend of tradition with tomorrow.",
+      "Joining interest-based groups helped me connect with like-minded peers and grow my network effectively.",
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const data = [
     rating: ratingStar[4],
     avatar: "https://i.pravatar.cc/100?img=23",
     message:
-      "With features like real-time alerts and automated trading, this site stands as a beacon of innovation in a rapidly evolving market.",
+      "The voting feature for startup ideas gave me valuable insights into what the market actually values.",
   },
   {
     id: 9,
@@ -86,7 +86,7 @@ const data = [
     rating: ratingStar[3],
     avatar: "https://i.pravatar.cc/100?img=20",
     message:
-      "Every visit is a journey through a modern crypto saga, where every detail reflects precision and passion.",
+      "Every session and interaction feels tailored towards fostering real innovation and leadership.",
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const data = [
     rating: ratingStar[4],
     avatar: "https://i.pravatar.cc/100?img=11",
     message:
-      "The dynamic interface and comprehensive tools make this platform a powerhouse – a true revolution in the crypto space. cryptolovee is simply inspiring.",
+      "This platform is a one-stop hub to sharpen skills, build connections, and bring startup ideas to life.",
   },
   {
     id: 11,
@@ -104,16 +104,16 @@ const data = [
     rating: ratingStar[4],
     avatar: "https://i.pravatar.cc/100?img=12",
     message:
-      "A blend of historical insights and futuristic predictions redefines the crypto market experience.",
+      "Blending learning modules with real-world mentorship is what sets this apart from any other network.",
   },
   {
     id: 12,
     name: "Devansh Mehta",
     gmail: "devansh.mehta@example.com",
-    rating: ratingStar[6],
+    rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=13",
     message:
-      "Every feature—from NFT integration to advanced notifications—testifies to a visionary approach, ushering in a digital renaissance.",
+      "From webinars to investor meetups, every feature feels like a stepping stone toward startup success.",
   },
   {
     id: 13,
@@ -122,7 +122,7 @@ const data = [
     rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=14",
     message:
-      "It feels like unlocking a treasure trove of market insights, where every update is a verse in a grand crypto epic.",
+      "It’s refreshing to be part of a community where education, networking, and idea growth happen hand-in-hand.",
   },
   {
     id: 14,
@@ -131,7 +131,7 @@ const data = [
     rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=15",
     message:
-      "The fusion of multi-currency support and AI-driven sentiment analysis offers a holistic view that is both profound and pragmatic.",
+      "Being able to access expert mentors and actionable insights has given my startup vision real direction.",
   },
   {
     id: 15,
@@ -140,52 +140,7 @@ const data = [
     rating: ratingStar[5],
     avatar: "https://i.pravatar.cc/100?img=16",
     message:
-      "Every update on the platform is a poetic progression—merging the wisdom of the past with the promise of tomorrow.",
-  },
-  {
-    id: 11,
-    name: "Kavya Iyer",
-    gmail: "kavya.iyer@example.com",
-    rating: ratingStar[4],
-    avatar: "https://i.pravatar.cc/100?img=12",
-    message:
-      "A blend of historical insights and futuristic predictions redefines the crypto market experience.",
-  },
-  {
-    id: 12,
-    name: "Devansh Mehta",
-    gmail: "devansh.mehta@example.com",
-    rating: ratingStar[6],
-    avatar: "https://i.pravatar.cc/100?img=13",
-    message:
-      "Every feature—from NFT integration to advanced notifications—testifies to a visionary approach, ushering in a digital renaissance.",
-  },
-  {
-    id: 13,
-    name: "Nisha Kumar",
-    gmail: "nisha.kumar@example.com",
-    rating: ratingStar[5],
-    avatar: "https://i.pravatar.cc/100?img=14",
-    message:
-      "It feels like unlocking a treasure trove of market insights, where every update is a verse in a grand crypto epic.",
-  },
-  {
-    id: 14,
-    name: "Rajesh Verma",
-    gmail: "rajesh.verma@example.com",
-    rating: ratingStar[5],
-    avatar: "https://i.pravatar.cc/100?img=15",
-    message:
-      "The fusion of multi-currency support and AI-driven sentiment analysis offers a holistic view that is both profound and pragmatic.",
-  },
-  {
-    id: 15,
-    name: "Simran Kaur",
-    gmail: "simran.kaur@example.com",
-    rating: ratingStar[5],
-    avatar: "https://i.pravatar.cc/100?img=16",
-    message:
-      "Every update on the platform is a poetic progression—merging the wisdom of the past with the promise of tomorrow.",
+      "Each interaction on the platform feels like a guided step toward building something impactful.",
   },
 ];
 

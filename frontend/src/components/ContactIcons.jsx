@@ -20,7 +20,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }) {
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'hello@TradeSense.dev', icon: IconAt },
+  { title: 'Email', description: 'hello@UniConnect.dev', icon: IconAt },
   { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
   { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
   { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },

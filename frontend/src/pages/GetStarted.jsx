@@ -13,6 +13,11 @@ import { FeaturesTitle } from '@/components/FeaturesTitle';
 import CardSlider from '@/components/CardSlider';
 import { Outlet } from 'react-router-dom';
 import { NothingFoundBackground } from '@/components/NothingFoundBackground';
+import {MultiLogin} from '@/components/MultiLogin';
+import { MultiSinup } from '@/components/MultiSinup';
+import { AuthenticationFormS } from '@/components/AuthenticationFormS';
+import { AuthenticationFormP } from '@/components/AuthenticationFormP';
+import { AuthenticationFormI } from '@/components/AuthenticationFormI';
 function GetStarted() {
   return (
     <>
@@ -27,7 +32,7 @@ function GetStarted() {
         <ScrollProgress></ScrollProgress>
         <HeroText></HeroText>
         <FeaturesTitle></FeaturesTitle>
-        <AuthenticationForm></AuthenticationForm>
+        <MultiSinup></MultiSinup>
         <FaqSimple></FaqSimple>
         <GetInTouch></GetInTouch>
         <EmailBanner></EmailBanner>

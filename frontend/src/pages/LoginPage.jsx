@@ -14,6 +14,7 @@ import  EmailBanner  from '@/components/EmailBanner';
 import { FeaturesTitle } from '@/components/FeaturesTitle';
 import CardSlider from '@/components/CardSlider';
 import { Outlet } from 'react-router-dom';
+import { MultiLogin } from '@/components/MultiLogin';
 function LoginPage() {
   return (
     <>
@@ -25,7 +26,7 @@ function LoginPage() {
         <NavbarMinimal></NavbarMinimal>
       </div>
       <div className={classes.hero}>
-        <AuthenticationForm></AuthenticationForm>
+        <MultiLogin></MultiLogin>
         {/* <TestimonialsSlider></TestimonialsSlider> */}
         {/* <CardsCarousel></CardsCarousel> */}
         {/* <HotCoins></HotCoins> */}

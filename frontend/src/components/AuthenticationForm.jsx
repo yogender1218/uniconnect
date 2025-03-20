@@ -49,7 +49,7 @@ export function AuthenticationForm(props) {
     />
     <Paper radius="md" p="xl" withBorder {...props} style={{width: '55vw',border:'none', marginRight: '1%',marginTop:'1%',marginBottom:'0%', backgroundColor: 'var(--bg-color)'}}>
       <Text size="lg" fw={500}>
-        Welcome to TradeSense, {type} with
+        Welcome to UniConnect, {type} with
       </Text>
 
       <Group grow mb="md" mt="md">
@@ -82,7 +82,7 @@ export function AuthenticationForm(props) {
           <TextInput
             required
             label="Email"
-            placeholder="hello@TradeSense.dev"
+            placeholder="hello@UniConnect.dev"
             value={form.values.email}
             onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
             error={form.errors.email && 'Invalid email'}

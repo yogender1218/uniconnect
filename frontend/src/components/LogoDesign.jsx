@@ -5,7 +5,7 @@ const LogoDesign = () => {
   return (
     <div className={styles.content}>
       <h6 className={styles.title}>
-        TradeSense
+        UniConnect
         <div className={styles.aurora}>
           <div className={styles.aurora__item}></div>
           <div className={styles.aurora__item}></div>

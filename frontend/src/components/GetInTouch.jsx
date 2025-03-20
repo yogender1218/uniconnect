@@ -8,7 +8,7 @@ export function GetInTouch() {
       <div className={styles.wrapper}>
         <div
           className={styles.contacts}
-          style={{ backgroundImage: 'url(/TradeSense/bg.svg)' , width: '150vw', backgroundSize: 'cover'}}  
+          style={{ backgroundImage: 'url(/UniConnect/bg.svg)' , width: '150vw', backgroundSize: 'cover'}}  
         >
           <Text fz="lg" fw={700} className={styles.title} c="#fff">
             Contact information
@@ -32,7 +32,7 @@ export function GetInTouch() {
                 boxShadow:'var(--form-input-box-shadow)',
                 border:'none'
               }}} />
-              <TextInput label="Your email" placeholder="hello@TradeSense.dev" required styles={{input: {
+              <TextInput label="Your email" placeholder="hello@UniConnect.dev" required styles={{input: {
                 background: 'var(--form-input-background)',
                 backdropFilter: 'var(--blur-bgcolor)',
                 WebkitBackdropFilter: 'blur(15px)',
