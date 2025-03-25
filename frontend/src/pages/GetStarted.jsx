@@ -25,9 +25,9 @@ function GetStarted() {
       <div className={classes.header}>
         <HeaderMegaMenu></HeaderMegaMenu>
       </div>
-      <div className={classes.navbar}>
+      {/* <div className={classes.navbar}>
         <NavbarMinimal></NavbarMinimal>
-      </div>
+      </div> */}
       <div className={classes.hero}>
         <ScrollProgress></ScrollProgress>
         <HeroText></HeroText>
@@ -37,9 +37,6 @@ function GetStarted() {
         <GetInTouch></GetInTouch>
         <EmailBanner></EmailBanner>
         <CardSlider />
-        {/* <TestimonialsSlider></TestimonialsSlider> */}
-        {/* <CardsCarousel></CardsCarousel> */}
-        {/* <HotCoins></HotCoins> */}
         <FooterLinks></FooterLinks>
       </div>
     </div>

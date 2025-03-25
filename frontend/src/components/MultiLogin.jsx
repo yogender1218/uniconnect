@@ -28,7 +28,7 @@ export function MultiLogin() {
       description:
         'Manage classes, upload study material, evaluate students, and stay connected with your academic community.',
       icon: IconUser,
-      link :'plogin'
+      link :'pplogin'
       
     },
     {

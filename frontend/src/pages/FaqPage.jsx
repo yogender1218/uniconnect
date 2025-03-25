@@ -12,9 +12,9 @@ function FaqPage() {
       <div className={classes.header}>
         <HeaderMegaMenu></HeaderMegaMenu>
       </div>
-      <div className={classes.navbar}>
+     {/* <div className={classes.navbar}>
         <NavbarMinimal></NavbarMinimal>
-      </div>
+      </div> */}
       <div className={classes.hero}>
         <FaqSimple></FaqSimple>
         <FooterLinks></FooterLinks>

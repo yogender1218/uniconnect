@@ -21,7 +21,7 @@ export function MultiSinup() {
       description:
         'Access your courses, submit assignments, check grades, and stay updated with latest announcements. A dedicated space for curious minds.',
       icon: IconSchool,
-      link :'slogin'
+      link :'plogin'
     },
     {
       title: 'Professor Sinup',
@@ -36,7 +36,7 @@ export function MultiSinup() {
       description:
         'Monitor your investments, review growth reports, access exclusive financial insights and strategic opportunities.',
       icon: IconCurrencyDollar,
-      link :'ilogin'
+      link :'plogin'
     },
   ];
   const features = mockdata.map((feature) => (

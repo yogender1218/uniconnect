@@ -8,3 +8,102 @@
      width: 62vw;
      margin-left: 6vw;
 }
+
+.roleSelection {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.radioLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.nextButton {
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.hidden {
+  display: none;
+}
+
+.registerButton {
+  margin-top: 15px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  background-color: darkgreen;
+}
+.loginButton {
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background-color: var(--primary-hover);
+}
+.nextButton {
+  margin-top: 15px;
+  background-color: rgb(11, 132, 189);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background-color: rgb(8, 101, 145);
+}
+
+.registerButton {
+  margin-top: 15px;
+  background-color: rgb(11, 132, 189);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  background-color: rgb(8, 101, 145);
+}
+
+.loginButton {
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background-color: var(--primary-hover);
+}
+

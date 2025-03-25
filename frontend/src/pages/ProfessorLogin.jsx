@@ -17,6 +17,7 @@ import { Outlet } from 'react-router-dom';
 import { MultiLogin } from '@/components/MultiLogin';
 import { AuthenticationFormS } from '@/components/AuthenticationFormS';
 import { AuthenticationFormP } from '@/components/AuthenticationFormP';
+import { LoginForm } from '@/components/LoginForm';
 function ProfessorLogin() {
   return (
     <>
@@ -24,11 +25,11 @@ function ProfessorLogin() {
       <div className={classes.header}>
         <HeaderMegaMenu></HeaderMegaMenu>
       </div>
-      <div className={classes.navbar}>
+     {/* <div className={classes.navbar}>
         <NavbarMinimal></NavbarMinimal>
-      </div>
+      </div> */}
       <div className={classes.hero}>
-        <AuthenticationFormP></AuthenticationFormP>
+        <AuthenticationFormS></AuthenticationFormS>
         {/* <TestimonialsSlider></TestimonialsSlider> */}
         {/* <CardsCarousel></CardsCarousel> */}
         {/* <HotCoins></HotCoins> */}

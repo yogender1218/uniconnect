@@ -16,6 +16,7 @@ import CardSlider from '@/components/CardSlider';
 import { Outlet } from 'react-router-dom';
 import { MultiLogin } from '@/components/MultiLogin';
 import { AuthenticationFormS } from '@/components/AuthenticationFormS';
+import { LoginForm } from '@/components/LoginForm';
 function StudentLogin() {
   return (
     <>
@@ -23,11 +24,11 @@ function StudentLogin() {
       <div className={classes.header}>
         <HeaderMegaMenu></HeaderMegaMenu>
       </div>
-      <div className={classes.navbar}>
+      {/* <div className={classes.navbar}>
         <NavbarMinimal></NavbarMinimal>
-      </div>
+      </div> */}
       <div className={classes.hero}>
-        <AuthenticationFormS></AuthenticationFormS>
+        <LoginForm></LoginForm>
         {/* <TestimonialsSlider></TestimonialsSlider> */}
         {/* <CardsCarousel></CardsCarousel> */}
         {/* <HotCoins></HotCoins> */}

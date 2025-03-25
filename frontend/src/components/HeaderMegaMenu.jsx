@@ -144,7 +144,6 @@ export function HeaderMegaMenu() {
               </HoverCard.Dropdown>
             </HoverCard>
             <a href="#" className={classes.link}>Workflow</a>
-            <a href="#" className={classes.link}>Community</a>
             <Link to="/support" className={classes.link}>Support</Link>
           </Group>
 

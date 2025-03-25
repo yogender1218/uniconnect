@@ -12,6 +12,7 @@ import SinupPage from './pages/SinupPage';
 import StudentLogin from './pages/StudentLogin';
 import ProfessorLogin from './pages/ProfessorLogin';
 import InvestorLogin from './pages/InvestorLogin';
+import PProfessorLogin from './pages/PProfessorLogin';
 function App() {
 
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path="support" element={<SupportPage/>} />
       <Route path="/slogin" element={<StudentLogin />} />
       <Route path="/plogin" element={<ProfessorLogin />} />
+      <Route path="/pplogin" element={<PProfessorLogin />} />
       <Route path="/ilogin" element={<InvestorLogin />} />
     </Routes>
   </Router>

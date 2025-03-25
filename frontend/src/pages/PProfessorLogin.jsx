@@ -15,9 +15,10 @@ import { FeaturesTitle } from '@/components/FeaturesTitle';
 import CardSlider from '@/components/CardSlider';
 import { Outlet } from 'react-router-dom';
 import { MultiLogin } from '@/components/MultiLogin';
-import { AuthenticationFormI } from '@/components/AuthenticationFormI';
+import { AuthenticationFormS } from '@/components/AuthenticationFormS';
+import { AuthenticationFormP } from '@/components/AuthenticationFormP';
 import { LoginForm } from '@/components/LoginForm';
-function InvestorLogin() {
+function PProfessorLogin() {
   return (
     <>
     <div className='position'>
@@ -40,4 +41,4 @@ function InvestorLogin() {
   )
 }
 
-export default InvestorLogin
+export default PProfessorLogin
