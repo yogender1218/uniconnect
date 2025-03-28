@@ -29,7 +29,7 @@ function ProfessorLogin() {
         <NavbarMinimal></NavbarMinimal>
       </div> */}
       <div className={classes.hero}>
-        <AuthenticationFormS></AuthenticationFormS>
+        <AuthenticationFormP></AuthenticationFormP>
         {/* <TestimonialsSlider></TestimonialsSlider> */}
         {/* <CardsCarousel></CardsCarousel> */}
         {/* <HotCoins></HotCoins> */}

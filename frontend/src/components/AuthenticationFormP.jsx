@@ -1,8 +1,8 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './AuthenticationForm.module.css';
 import {
-  Anchor,
   Button,
-  Checkbox,
   Divider,
   Group,
   Paper,
@@ -10,150 +10,103 @@ import {
   Stack,
   Text,
   TextInput,
+  FileInput,
+  Radio,
+  Notification,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { upperFirst, useToggle } from '@mantine/hooks';
-import { GoogleButton } from './GoogleButton';
-import { TwitterButton } from './TwitterButton';
 import Lottie from "lottie-react";
 import animationData from "../assets/sinup.json";
-import { ConfettiSideCannons } from './ConfettiSideCannons';
-
 
 export function AuthenticationFormP(props) {
-  const [type, toggle] = useToggle(['login', 'register']);
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
+
   const form = useForm({
     initialValues: {
+      username: '',
       email: '',
-      name: '',
+      phone: '',
       password: '',
-      terms: true,
+      role: '',
+      profile_picture: null,
+      cover_photo: null,
     },
-
     validate: {
+      username: (val) => (val ? null : 'Username is required'),
       email: (val) => (/^\S+@\S+$/.test(val) ? null : 'Invalid email'),
-      password: (val) => (val.length <= 6 ? 'Password should include at least 6 characters' : null),
+      phone: (val) => (val.length > 0 && val.length <= 15 ? null : 'Phone number is required (max 15 chars)'),
+      password: (val) => (val.length >= 6 ? null : 'Password must have at least 6 characters'),
+      role: (val) => (val ? null : 'Please select a role'),
     },
   });
 
+  const handleRegister = async () => {
+    setErrorMessage('');
+
+    const formData = new FormData();
+    Object.keys(form.values).forEach((key) => {
+      if (form.values[key] !== '' && form.values[key] !== null) {
+        formData.append(key, form.values[key]);
+      }
+    });
+
+    try {
+      const response = await fetch('https://uniconnectbackend.onrender.com/api/users/register/', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem('token', data.token);
+        alert('Registration Successful!');
+        navigate('/dashboard');
+      } else {
+        setErrorMessage(data.error || 'Registration failed. Please try again.');
+      }
+    } catch (error) {
+      setErrorMessage('Something went wrong. Please try again later.');
+    }
+  };
+
   return (
     <div className={styles.container}>
-       <Lottie 
-      animationData={animationData} 
-      loop={true} 
-      autoplay={true} 
-      style={{ width: '50vw', height: '20%',paddingTop:'5vh',paddingBottom:'-1vh',paddingLeft:'2%',paddingRight:'0%' }}
-      rendererSettings={{
-        preserveAspectRatio: "xMidYMid slice",
-      }}
-    />
-    <Paper radius="md" p="xl" withBorder {...props} style={{width: '55vw',border:'none', marginRight: '1%',marginTop:'1%',marginBottom:'0%', backgroundColor: 'var(--bg-color)'}}>
-      <Text size="lg" fw={500}>
-        Welcome to UniConnect, {type} Professor with
-      </Text>
+      <Lottie animationData={animationData} loop autoplay style={{ width: '50vw', height: '20%' }} />
+      <Paper radius="md" p="xl" withBorder {...props} style={{ width: '55vw', border: 'none', backgroundColor: 'var(--bg-color)' }}>
+        <Text size="lg" fw={500}>Register on UniConnect</Text>
 
-      <Group grow mb="md" mt="md">
-        <GoogleButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)', borderColor:'var(--border-color)' }}>Google</GoogleButton>
-        <TwitterButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)', borderColor:'var(--border-color)' }}>Twitter</TwitterButton>
-      </Group>
+        <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-      <Divider label="Or continue with email" labelPosition="center" my="lg" />
+        {errorMessage && <Notification color="red">{errorMessage}</Notification>}
 
-      <form onSubmit={form.onSubmit(() => {})}>
-        <Stack>
-          {type === 'register' && (
-            <TextInput
-              label="Name"
-              placeholder="Your name"
-              value={form.values.name}
-              onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
-              radius="md"
-              styles={{input: {
-                background: 'var(--form-input-background)',
-                backdropFilter: 'var(--blur-bgcolor)',
-                WebkitBackdropFilter: 'blur(15px)',
-                borderColor: 'var(--formborder-color)',
-                boxShadow:'var(--form-input-box-shadow)',
-                border:'1 px solid var(--formborder-color)',
-              }}}
-            />
-          )}
-          {type === 'register' && (
-            <TextInput
-              label="Username"
-              placeholder="Enter Username"
-              value={form.values.name}
-              onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
-              radius="md"
-              styles={{input: {
-                background: 'var(--form-input-background)',
-                backdropFilter: 'var(--blur-bgcolor)',
-                WebkitBackdropFilter: 'blur(15px)',
-                borderColor: 'var(--formborder-color)',
-                boxShadow:'var(--form-input-box-shadow)',
-                border:'1 px solid var(--formborder-color)',
-              }}}
-            />
-            
-          )}
+        <form onSubmit={(e) => { e.preventDefault(); handleRegister(); }}>
+          <Stack>
+            <TextInput label="Username" placeholder="Enter your username" {...form.getInputProps('username')} required />
+            <TextInput label="Email" placeholder="hello@UniConnect.dev" {...form.getInputProps('email')} required />
+            <TextInput label="Phone" placeholder="Enter your phone number" {...form.getInputProps('phone')} required />
+            <PasswordInput label="Password" placeholder="Enter your password" {...form.getInputProps('password')} required />
 
-          <TextInput
-            required
-            label="Email"
-            placeholder="hello@UniConnect.dev"
-            value={form.values.email}
-            onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
-            error={form.errors.email && 'Invalid email'}
-            radius="md"
-            styles={{input: {
-              background: 'var(--form-input-background)',
-              backdropFilter: 'var(--blur-bgcolor)',
-              WebkitBackdropFilter: 'blur(15px)',
-              borderColor: 'var(--formborder-color)',
-              boxShadow:'var(--form-input-box-shadow)',
-              border:'1 px solid var(--formborder-color)',
-            }}}
-          />
+            {/* ✅ Role Selection (Student, Professor, Investor) */}
+            <div className={styles.roleSelection}>
+              <label className={styles.radioLabel}>Select Role:</label>
+              <Radio.Group value={form.values.role} onChange={(val) => form.setFieldValue('role', val)} required>
+                <Radio value="student" label="Student" />
+                <Radio value="professor" label="Professor" />
+                <Radio value="investor" label="Investor" />
+              </Radio.Group>
+            </div>
 
-          <PasswordInput
-            required
-            label="Password"
-            placeholder="Your password"
-            value={form.values.password}
-            onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
-            error={form.errors.password && 'Password should include at least 6 characters'}
-            radius="md"
-            styles={{input: {
-              background: 'var(--form-input-background)',
-              backdropFilter: 'var(--blur-bgcolor)',
-              WebkitBackdropFilter: 'blur(15px)',
-              borderColor: 'var(--formborder-color)',
-              boxShadow:'var(--form-input-box-shadow)',
-              border:'1 px solid var(--formborder-color)',
-            }}}
-          />
+            <FileInput label="Profile Picture (Optional)" accept="image/*" onChange={(file) => form.setFieldValue('profile_picture', file)} />
+            <FileInput label="Cover Photo (Optional)" accept="image/*" onChange={(file) => form.setFieldValue('cover_photo', file)} />
 
-          {type === 'register' && (
-            <Checkbox
-              label="I accept terms and conditions"
-              checked={form.values.terms}
-              onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
-            />
-          )}
-        </Stack>
-
-        <Group justify="space-between" mt="xl">
-        <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
-            {type === 'register'
-              ? 'Already have an account? Login'
-              : "Don't have an account? Register"}
-          </Anchor>
-          <Button type="submit" radius="xl">
-            {upperFirst(type)}
-          </Button>
-        </Group>
-      </form>
-    </Paper>
+            <Button type="submit" className={styles.registerButton}>
+              Register
+            </Button>
+          </Stack>
+        </form>
+      </Paper>
     </div>
   );
 }

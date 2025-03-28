@@ -107,3 +107,17 @@
   background-color: var(--primary-hover);
 }
 
+.inputStyle{
+    background: var(--form-input-background);
+    backdrop-filter: var(--blur-bgcolor);
+    border-color: var(--formborder-color);
+    box-shadow:var(--form-input-box-shadow);
+    border:1 px solid var(--formborder-color);
+}
+input{
+  background: var(--form-input-background);
+  backdrop-filter: var(--blur-bgcolor);
+  border-color: var(--formborder-color);
+  box-shadow:var(--form-input-box-shadow);
+  border:1 px solid var(--formborder-color);
+}
