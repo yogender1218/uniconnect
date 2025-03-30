@@ -83,27 +83,81 @@ export function AuthenticationFormP(props) {
 
         <form onSubmit={(e) => { e.preventDefault(); handleRegister(); }}>
           <Stack>
-            <TextInput label="Username" placeholder="Enter your username" {...form.getInputProps('username')} required />
-            <TextInput label="Email" placeholder="hello@UniConnect.dev" {...form.getInputProps('email')} required />
-            <TextInput label="Phone" placeholder="Enter your phone number" {...form.getInputProps('phone')} required />
-            <PasswordInput label="Password" placeholder="Enter your password" {...form.getInputProps('password')} required />
+            <TextInput  styles={{input: {
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
+                WebkitBackdropFilter: 'blur(15px)',
+                borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'1 px solid var(--formborder-color)',
+                color:'var(--text-color)',
+                fontSize:'0.95rem'
+              }}} label="Username" placeholder="Enter your username" {...form.getInputProps('username')} required />
+            <TextInput  styles={{input: {
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
+                WebkitBackdropFilter: 'blur(15px)',
+                borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'1 px solid var(--formborder-color)',
+                color:'var(--text-color)',
+                fontSize:'0.95rem'
+              }}} label="Email" placeholder="hello@UniConnect.dev" {...form.getInputProps('email')} required />
+            <TextInput  styles={{input: {
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
+                WebkitBackdropFilter: 'blur(15px)',
+                borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'1 px solid var(--formborder-color)',
+                color:'var(--text-color)',
+                fontSize:'0.95rem'
+              }}} label="Phone" placeholder="Enter your phone number" {...form.getInputProps('phone')} required />
+            <PasswordInput  styles={{input: {
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
+                WebkitBackdropFilter: 'blur(15px)',
+                borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'1 px solid var(--formborder-color)',
+                color:'var(--text-color)',
+                fontSize:'0.95rem'
+              }}} label="Password" placeholder="Enter your password" {...form.getInputProps('password')} required />
 
             {/* ✅ Role Selection (Student, Professor, Investor) */}
             <div className={styles.roleSelection}>
               <label className={styles.radioLabel}>Select Role:</label>
-              <Radio.Group value={form.values.role} onChange={(val) => form.setFieldValue('role', val)} required>
-                <Radio value="student" label="Student" />
-                <Radio value="professor" label="Professor" />
-                <Radio value="investor" label="Investor" />
+              <Radio.Group style={{marginTop:'-4px'}} value={form.values.role} onChange={(val) => form.setFieldValue('role', val)} required>
+                <Radio style={{margin:'5px'}} value="student" label="Student" />
+                <Radio  style={{margin:'5px'}} value="professor" label="Professor" />
+                <Radio  style={{margin:'5px'}} value="investor" label="Investor" />
               </Radio.Group>
             </div>
 
-            <FileInput label="Profile Picture (Optional)" accept="image/*" onChange={(file) => form.setFieldValue('profile_picture', file)} />
-            <FileInput label="Cover Photo (Optional)" accept="image/*" onChange={(file) => form.setFieldValue('cover_photo', file)} />
+            <FileInput  styles={{input: {
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
+                WebkitBackdropFilter: 'blur(15px)',
+                borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'1 px solid var(--formborder-color)',
+              }}} label="Profile Picture (Optional)" accept="image/*" onChange={(file) => form.setFieldValue('profile_picture', file)} />
+            <FileInput  styles={{input: {
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
+                WebkitBackdropFilter: 'blur(15px)',
+                borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'1 px solid var(--formborder-color)',
+              }}} label="Cover Photo (Optional)" accept="image/*" onChange={(file) => form.setFieldValue('cover_photo', file)} />
 
-            <Button type="submit" className={styles.registerButton}>
-              Register
-            </Button>
+<button 
+  type="button" 
+  className={styles.registerButton} 
+  onClick={() => window.location.href = "https://preview--frontend-django-dispatch.lovable.app/"}>
+  Register
+</button>
+
           </Stack>
         </form>
       </Paper>

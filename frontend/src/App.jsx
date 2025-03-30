@@ -13,6 +13,8 @@ import StudentLogin from './pages/StudentLogin';
 import ProfessorLogin from './pages/ProfessorLogin';
 import InvestorLogin from './pages/InvestorLogin';
 import PProfessorLogin from './pages/PProfessorLogin';
+import SDashboardPage from './pages/SDashboardPage';
+import StudentProfilePage from './pages/StudentProfilePage';
 function App() {
 
   return (
@@ -30,6 +32,8 @@ function App() {
       <Route path="/plogin" element={<ProfessorLogin />} />
       <Route path="/pplogin" element={<PProfessorLogin />} />
       <Route path="/ilogin" element={<InvestorLogin />} />
+      <Route path="/sdashboard" element={<SDashboardPage />} />
+      <Route path="/studentprofile" element={<StudentProfilePage />} />
     </Routes>
   </Router>
   )

@@ -34,6 +34,7 @@ import { ConfettiSideCannons } from './ConfettiSideCannons';
 import { StyledRegister } from './StyledRegister';
 import { Link } from "react-router-dom";
 import { StyledGetStarted } from './StylesGetStarted';
+import { Underline } from 'lucide-react';
 
 const mockdata = [
   { 
@@ -104,17 +105,17 @@ export function HeaderMegaMenu() {
   return (
     <Box pb={120} >
       <header className={classes.header}>
-        <Group h="100%" w="100%"  justify="space-between" >
+        <Group h="100%" w="100%" style={{marginLeft:'12.5vw'}}  justify="space-between" >
           {/* Left Section - Logo & Brand Name */}
           <Group align="center" gap="xs"  style={{paddingLeft:'3.1vw'}} >
           <Link to="/"> <img src="/UniConnect/UniConnectt.png" alt="Logo" className={classes.logo} /></Link>
            <Link to="/">
-           <Text fw={500}>UniConnect</Text>
+           <Text fw={500}>Dispatch</Text>
            </Link>
           </Group>
 
           {/* Center Section - Navigation Links */}
-          <Group h="100%" gap={0} visibleFrom="sm" justify="center" style={{ flexGrow: 1 }}>
+          <Group h="100%" gap={0} visibleFrom="sm" justify="right" style={{ flexGrow: 1 }}>
           <Link to="/" className={classes.link}>Home</Link>
             <HoverCard width={600} position="bottom" radius="md" shadow="md"  withinPortal >
               <HoverCard.Target>
@@ -149,9 +150,9 @@ export function HeaderMegaMenu() {
 
           {/* Right Section - Auth Buttons & Theme Toggle */}
           <Group visibleFrom="sm" gap="sm">
-          <Link to="/login"><Button variant="default"><ConfettiSideCannons></ConfettiSideCannons></Button></Link>
-          <Link to="/sinup"> <Button><StyledRegister></StyledRegister></Button></Link>
-            <button className={classes.themeToggle} onClick={toggleTheme}>
+          <Link to="/login"><Button variant="default"><ConfettiSideCannons ></ConfettiSideCannons></Button></Link>
+          <Link to="/sinup"> <Button ><StyledRegister></StyledRegister></Button></Link>
+            <button style={{marginRight:'7vw'}} className={classes.themeToggle} onClick={toggleTheme}>
               {theme === "light" ? <IconMoon size={22} /> : <IconSun size={22} />}
             </button>
           </Group>
@@ -174,9 +175,9 @@ export function HeaderMegaMenu() {
           <a href="#" className={classes.link}>Learn</a>
           <a href="#" className={classes.link}>Academy</a>
           <Divider my="sm" />
-          <Group justify="center" grow pb="xl" px="md" >
+          <Group  justify="center" grow pb="xl" px="md" >
             <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            <Button >Sign up</Button>
           </Group>
         </ScrollArea>
       </Drawer>

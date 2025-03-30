@@ -38,7 +38,7 @@ export function ConfettiSideCannons() {
 
   return (
     <div className="relative">
-      <Button type='submit' onClick={handleClick}>Login</Button>
+      <Button style={{background:'transparent',border:'none', cursor:'pointer'}} type='submit' onClick={handleClick}>Login</Button>
     </div>
   );
 }

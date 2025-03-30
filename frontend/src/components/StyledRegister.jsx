@@ -41,6 +41,7 @@ export function StyledRegister() {
       <Button
         onClick={handleClick}
         type="submit"
+        style={{background:'transparent',border:'none', cursor:'pointer'}}
       >
         Sign Up
       </Button>

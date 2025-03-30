@@ -11,6 +11,7 @@
   --fcontent-color:rgb(15, 15, 15);
   --form-input-background: #f7f7f7;
   --form-input-box-shadow:inset 5px 5px 10px rgba(231, 231, 231, 0.411), inset -5px -5px 12px rgba(255, 255, 255, 0.575);
+  --hover-color: #f7f7f7;
 }
 
 [data-theme="dark"] {
@@ -24,8 +25,9 @@
   --htext-color: #302e2ecc;
   --ftext-color: #867f7f;
   --fcontent-color:rgb(223, 221, 221);
-  --form-input-background: #010b1638;
-  --form-input-box-shadow:inset 5px 5px 10px rgba(12, 12, 12, 0.884), inset -5px -5px 5px 12px rgba(24, 24, 24, 0.021);
+  --form-input-background: #18181838;
+  --form-input-box-shadow:inset 5px 5px 10px rgba(12, 12, 12, 0.247), inset -5px -5px 12px rgba(8, 8, 8, 0.5);
+  --hover-color: #1a1a1a;
 }
 
 body {

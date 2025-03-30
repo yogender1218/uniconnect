@@ -59,7 +59,7 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <div style={{display:'flex'}}> <img src="/UniConnect/UniConnectt.png" alt="Logo" className={classes.logo} /><span style={{marginLeft:'5px'}}>UniConnect</span></div>
+          <div style={{display:'flex'}}> <img src="/UniConnect/UniConnectt.png" alt="Logo" className={classes.logo} /><span style={{marginLeft:'5px'}}>Dispatch</span></div>
           <div><Text size="xs" c="dimmed" className={classes.description}>
           Where every crypto beat echoes the legacy of the past and the promise of tomorrow 
           </Text></div>
@@ -68,7 +68,7 @@ export function FooterLinks() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-        © 2025 UniConnect. All rights reserved..
+        © 2025 Dispatch All rights reserved..
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
