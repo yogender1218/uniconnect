@@ -154,7 +154,7 @@ export function AuthenticationFormP(props) {
 <button 
   type="button" 
   className={styles.registerButton} 
-  onClick={() => window.location.href = "https://preview--frontend-django-dispatch.lovable.app/"}>
+  onClick={() => window.location.href = "https://uniqconnectt.netlify.app/"}>
   Register
 </button>
 

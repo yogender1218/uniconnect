@@ -31,8 +31,8 @@ This is more than a platform—it’s a symphony of ideas, insights, and impactf
 
         <div className={classes.controls}>
          <Link to="/sinup">
-         <Button className={classes.control} size="lg" variant="default" color="gray">
-         <StyledGetStarted></StyledGetStarted>
+         <Button style={{marginBottom:'10px'}} className={classes.control} size="lg" variant="default" color="gray">
+         <StyledGetStarted ></StyledGetStarted>
           </Button>
          </Link>
           <Button className={classes.control} size="lg">

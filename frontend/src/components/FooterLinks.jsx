@@ -59,7 +59,7 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <div style={{display:'flex'}}> <img src="/UniConnect/UniConnectt.png" alt="Logo" className={classes.logo} /><span style={{marginLeft:'5px'}}>Dispatch</span></div>
+          <div style={{display:'flex'}}> <img src="/UniConnect/UniConnectt.png" alt="Logo" className={classes.logo} /><span style={{marginLeft:'5px'}} className={classes.name}>Dispatch</span></div>
           <div><Text size="xs" c="dimmed" className={classes.description}>
           Where every crypto beat echoes the legacy of the past and the promise of tomorrow 
           </Text></div>

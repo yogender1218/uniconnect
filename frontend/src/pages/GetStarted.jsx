@@ -34,7 +34,7 @@ function GetStarted() {
         <FeaturesTitle></FeaturesTitle>
         <MultiSinup></MultiSinup>
         <FaqSimple></FaqSimple>
-        <GetInTouch></GetInTouch>
+        {/* <GetInTouch></GetInTouch> */}
         <EmailBanner></EmailBanner>
         <CardSlider />
         <FooterLinks></FooterLinks>

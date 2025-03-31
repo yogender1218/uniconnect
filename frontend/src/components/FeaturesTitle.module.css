@@ -12,3 +12,13 @@
   margin-bottom: var(--mantine-spacing-md);
   color: var(--text-color);
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    text-align: left;
+  }
+  .wrapper{
+    margin: -10vw 0vw 0vw -6vw;
+  }
+}

@@ -92,3 +92,20 @@
     margin-left: 0;
   }
 }
+
+@media (max-width:480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: var(--mantine-font-size-sm);
+  }
+  .wrapper {
+    position: relative;
+    padding-top: 1vh;
+    padding-bottom: 80px;
+    margin-top: 10vh;
+margin-left: -5vw;
+  }
+}
