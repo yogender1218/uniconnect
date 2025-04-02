@@ -60,7 +60,7 @@ export function MultiSinup() {
   ));
 
   return (
-    <Container style={{marginLeft:'-20px'}} size="lg" py="xl">
+    <Container  size="lg" py="xl">
       <Group justify="center">
         <Badge variant="filled" size="lg">
           Secure Multi-User Access

@@ -1,0 +1,15 @@
+.startup-button {
+  background-color: white;
+  border: 1px solid #adadad; /* You can adjust the border style as needed */
+  border-radius: 25px; /* To make it rounded */
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  color: black;
+}
+
+.startup-button:hover {
+  background-color: #f0f0f0; /* Optional hover effect */
+}

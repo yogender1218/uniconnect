@@ -3,7 +3,7 @@ import classes from './FaqSimple.module.css';
 
 export function FaqSimple() {
   return (
-    <Container size="sm" style={{ maxWidth: 1110, marginTop: '80px', marginBottom: '80px',marginLeft:'-30px' }}>
+    <Container size="sm" style={{ maxWidth: 1110, marginTop: '80px', marginBottom: '110px' }}>
       <Title align="center" style={{ marginBottom: '50px' }}>
         Frequently Asked Questions
       </Title>

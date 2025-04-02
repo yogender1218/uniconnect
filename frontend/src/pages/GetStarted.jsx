@@ -18,12 +18,17 @@ import { MultiSinup } from '@/components/MultiSinup';
 import { AuthenticationFormS } from '@/components/AuthenticationFormS';
 import { AuthenticationFormP } from '@/components/AuthenticationFormP';
 import { AuthenticationFormI } from '@/components/AuthenticationFormI';
+import StartupForm from '@/components/StartupForm';
+import StartupCard from '@/components/StartupCard';
+import StartupButton from '@/components/StartupButton';
+import StartupInvestor from '@/components/StartupInvestor';
 function GetStarted() {
   return (
     <>
     <div className='position'>
       <div className={classes.header}>
         <HeaderMegaMenu></HeaderMegaMenu>
+        
       </div>
       {/* <div className={classes.navbar}>
         <NavbarMinimal></NavbarMinimal>
@@ -34,10 +39,9 @@ function GetStarted() {
         <FeaturesTitle></FeaturesTitle>
         <MultiSinup></MultiSinup>
         <FaqSimple></FaqSimple>
-        {/* <GetInTouch></GetInTouch> */}
-        <EmailBanner></EmailBanner>
+        <GetInTouch></GetInTouch>
+         <EmailBanner></EmailBanner>
         <CardSlider />
-        <FooterLinks></FooterLinks>
       </div>
     </div>
     <Outlet />  
